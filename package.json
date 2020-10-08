@@ -1,0 +1,27 @@
+{
+  "name": "gtindo_dev",
+  "version": "1.0.0",
+  "description": "My personnal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://gtyletindo@gmail.com@source.developers.google.com:2022/p/gtindo-dev/r/gtindo-dev"
+  },
+  "keywords": [
+    "portfolio",
+    "resume"
+  ],
+  "author": "Guekeng Tindo yvan",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
