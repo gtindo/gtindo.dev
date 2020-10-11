@@ -3,99 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="google-site-verification" content="yvsTYsWWD9mX6C1HKzK3ALu3uSHx15ne-amCRu1y2XY" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="google-site-verification" content="yvsTYsWWD9mX6C1HKzK3ALu3uSHx15ne-amCRu1y2XY" />
   <title>Gtindo Dev | Home</title>
 
-  <!-- link href="/static/css/knacss.css" rel="stylesheet" /-->
-  <!-- link href="/static/css/knacss.css" rel="stylesheet" /-->
-
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-  <style>
-    body{
-			background: #161616;
-			color: #FFFFFF;
-			font-family: 'Open Sans', sans-serif;
-		}
-
-		h1{
-			font-size: 3rem;
-		}
-
-		.container{
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			align-content: center;
-			margin-top: 100px;
-		}
-
-		.list{
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			flex-wrap: wrap;
-			margin-top: 20px;
-		}
-
-		.item{
-			text-align: center;
-			margin-top: 15px;
-			margin-left: 10px;
-			margin-right: 10px;
-		}
-
-		.item span{
-			font-size: 1.5rem;
-		}
-
-		.icon{
-			font-size: 30px;
-		}
-
-		a{
-			color: #FFFFFF;
-			text-decoration: none;
-		}
-
-		a:hover{
-			color: orange;
-		}
-  </style>
+	<link rel="shortcut icon" href="/static/img/favicon.svg" type="image/jpeg" />
+	
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<link href="/static/css/knacss.css" rel="stylesheet" />
+	<link href="/static/css/knacss.css" rel="stylesheet" />
+	<link href="/static/css/styles.css" rel="stylesheet" />
+	
 </head>
 
 <body>
-  <div class="container">
-		<h1>- G_T_Y Lab -</h1>
-		<div class="list">
-			<div class="item">
-				<a href="https://medium.com/@gtindo">
-					<i class="fa fa-medium icon" ></i><br />
-					<span>Blog</span>
-				</a>
+
+	<main class="item-center">
+		<div class="container grid-12-small-4">
+			<header class="col-2-small-4">
+				
+				<nav class="nav-mobile">
+					<div class="nav-item nav-logo">
+						<img src="/static/img/logo-small.svg" alt="Mobile logo" />
+					</div>
+					<div class="nav-item nav-action">
+						<img id="nav-action" data-open="0" src="/static/img/burger.svg" alt="action logo" />
+					</div>
+
+					<div id="dropdown-menu" class="dropdown-menu-deactive">
+						<ul>
+							<li><a class="nav-a" href="/">Home</a></li>
+							<li><a class="nav-a" href="#">Portfolio</a></li>
+							<li><a class="nav-a" href="#">Resume</a></li>
+							<li><a class="nav-a" href="#">Articles</a></li>
+							<li><a class="nav-a" href="#">Contacts</a></li>
+							<li style="margin-top: 10px">
+								<a href="https://twitter.com/gtindo_dev">
+									<img src="/static/img/twitter.svg" alt="twitter logo" />
+								</a>&nbsp;
+								<a href="https://www.linkedin.com/in/guekeng-tindo-yvan-b0a683111/">
+									<img src="/static/img/linkedin.svg" alt="linkedin logo" />
+								</a>&nbsp;
+								<a href="https://github.com/gtindo">
+									<img src="/static/img/github.svg" alt="github logo" />
+								</a>&nbsp;
+								<a href="https://dev.to/gtindo">
+									<img src="/static/img/dev.svg" alt="dev.to logo" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+
+			</header>
+
+			<div class="col-10-small-4" style="margin-top:55px;">
+				<section>
+					Under Maintenance ! Try again later.
+				</section>
+			
+				<section>
+				
+				</section>
+			
+				<section>
+
+				</section>
 			</div>
-			<div class="item">
-				<a href="https://www.linkedin.com/in/guekeng-tindo-yvan-b0a683111/">
-					<i class="fa fa-linkedin icon"></i><br />
-					<span>Linkedin</span>
-				</a>
-			</div>
-			<div class="item">
-				<a href="https://github.com/gtindo">
-					<i class="fa fa-github icon"></i><br />
-					<span>github</span>
-				</a>
-			</div>
-			<div class="item">
-				<a href="#">
-					<i class="fas fa-laptop-code icon"></i><br />
-					<span>Projects</span>
-				</a>
+
+			<div class="col-12-small-12">
+				<footer>
+
+				</footer>
 			</div>
 		</div>
-	</div>
+	</main>
+	
+	<script>
+		let navAction = document.getElementById("nav-action");
+		let dropdownMenu = document.getElementById("dropdown-menu");
+
+		navAction.addEventListener('click', function(){
+			let isMenuOpened = this.getAttribute("data-open") === "0" ? false : true;
+
+			if(isMenuOpened){
+				this.setAttribute("src", "/static/img/burger.svg");
+				this.setAttribute("data-open", "0");
+				dropdownMenu.setAttribute("class", "dropdown-menu-deactive");
+			}else{
+				this.setAttribute("src", "/static/img/close.svg");
+				this.setAttribute("data-open", "1");
+				dropdownMenu.setAttribute("class", "dropdown-menu-active")
+			}
+		})
+	</script>
 </body>
 </html>
