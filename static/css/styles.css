@@ -18,6 +18,16 @@ a {
   text-decoration: none;
 }
 
+h1, h2, h3 {
+  font-family: var(--font-family);
+  color: var(--dark-color);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
 .item-center {
   display: flex;
   justify-content: center;
@@ -33,7 +43,108 @@ a {
   display: none;
 }
 
+.headline {
+  text-align: center;
+  padding: 70px 0 35px 0;
+}
+
+.headline h1 {
+  font-weight: bolder;
+  color: var(--dark-color);
+  font-size: 24px;
+}
+
+.headline em { font-size: 14px }
+
+.headline p { 
+  font-size: 18px;
+  margin: 15px 0 15px 0;
+}
+
+.picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+}
+
+.about { 
+  text-align: center;
+  background-color: var(--gray-color);
+  padding: 35px 0 35px 0;
+}
+
+.about p {
+  font-size: 18px;
+  width: 630px;
+}
+
+.tools {
+  padding: 35px 0 35px 0;
+}
+
+.tools h2 {
+  text-align: center;
+}
+
+.tools h3 {
+  font-size: 18px;
+}
+
+.tools div {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+
+.tools ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tools li {
+  display: inline-block;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 2px 5px 2px 5px;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: var(--dark-color);
+  text-align: center;
+  color: var(--light-color);
+  padding: 10px;
+}
+
+.nav-desktop {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.nav-desktop ul {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 0 0;
+}
+
+.nav-desktop a {
+  display: block;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-top: 14px;
+}
+
+.nav-desktop a:hover {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 720px) {
+  .nav-desktop {
+    display: none
+  }
+
   .container {
     width: 100%;
   }
@@ -47,6 +158,7 @@ a {
     width: 100%;
     height: 55px;
     box-shadow: var(--shadow);
+    background-color: var(--light-color);
   }
 
   .nav-item {
@@ -101,5 +213,21 @@ a {
     padding: 5px;
     font-weight: bold;
     font-size: var(--medium-text);
+  }
+
+  .headline {
+    padding: 35px 0 35px 0;
+  }
+
+  .about p {
+    font-size: 18px;
+    width: 85%;
+  }
+
+  .tools div {
+    display: inline-block;
+    width: 90%;
+    text-align: left;
+    margin: 10px 0 5px 5%;
   }
 }
