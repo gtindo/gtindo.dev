@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="google-site-verification" content="yvsTYsWWD9mX6C1HKzK3ALu3uSHx15ne-amCRu1y2XY" />
+	<meta name="description" content="Tutorials, codelabs and posts." />
+	
+	<meta name="twitter:site" content="@gtindo_dev" />
+	<meta name="twitter:description" content="Tutorials, codelabs and posts." />
+	<meta name="twitter:image" content="https://gtindo.dev/static/img/gtindo.jpg" />
+	
+	<meta name="og:description" content="Tutorials, codelabs and posts." />
+	<meta name="og:image" content="https://gtindo.dev/static/img/gtindo.jpg" />
+	
+	<title>Gtindo Dev | Articles</title>
+
+	<%- include('imports.ejs') -%>
+ 	
+</head>
+
+<body>
+
+	<main class="item-center">
+		<div class="container grid-12-small-4">
+			<header class="col-2-small-4">
+				<%- include('header.ejs') -%>
+			</header>
+
+      <div class="col-10-small-4 content" style="margin-top:55px;">		
+        <h1 class="title">Articles</h1>	
+
+        <div class="grid-12 has-gutter">
+
+          <% articles.forEach(function(article){ %>
+            <article class="col-3">
+              <a href="<%= article.link %>" target="_blank" rel="noreferre nooponer">
+                <img src="<%= article.cover %>" alt="<%= article.title %> Cover" /> <br /> <br />
+                <span><%= article.date %> &nbsp; <%= article.time %> read</span> <br />
+                <h4 style="font-weight: bolder;"> <%= article.title %> </h4>
+              </a>
+            </article>
+          <% }); %>
+
+        </div>
+			</div>
+
+		</div>
+	</main>
+	
+	<script src="/static/js/main.js"> </script>
+</body>
+</html>
