@@ -15,13 +15,8 @@
 	
 	<title>Gtindo Dev | Home</title>
 
-	<link rel="shortcut icon" href="/static/img/favicon.svg" type="image/jpeg" />
-	
-	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-	<link href="/static/css/knacss.css" rel="stylesheet" />
-	<link href="/static/css/knacss.css" rel="stylesheet" />
-	<link href="/static/css/styles.css" rel="stylesheet" />
-	
+	<%- include('imports.ejs') -%>
+ 	
 </head>
 
 <body>
@@ -29,67 +24,7 @@
 	<main class="item-center">
 		<div class="container grid-12-small-4">
 			<header class="col-2-small-4">
-				
-				<nav class="nav-mobile">
-					<div class="nav-item nav-logo">
-						<img src="/static/img/logo-small.svg" alt="Mobile logo" />
-					</div>
-					<div class="nav-item nav-action">
-						<img id="nav-action" data-open="0" src="/static/img/burger.svg" alt="action logo" />
-					</div>
-
-					<div id="dropdown-menu" class="dropdown-menu-deactive">
-						<ul>
-							<li><a class="nav-a" href="/">Home</a></li>
-							<li><a class="nav-a" href="#">Portfolio</a></li>
-							<li><a class="nav-a" href="#">Resume</a></li>
-							<li><a class="nav-a" href="#">Articles</a></li>
-							<li><a class="nav-a" href="#">Contacts</a></li>
-							<li style="margin-top: 10px">
-								<a href="https://twitter.com/gtindo_dev">
-									<img src="/static/img/twitter.svg" alt="twitter logo" />
-								</a>&nbsp;
-								<a href="https://www.linkedin.com/in/guekeng-tindo-yvan-b0a683111/">
-									<img src="/static/img/linkedin.svg" alt="linkedin logo" />
-								</a>&nbsp;
-								<a href="https://github.com/gtindo">
-									<img src="/static/img/github.svg" alt="github logo" />
-								</a>&nbsp;
-								<a href="https://dev.to/gtindo">
-									<img src="/static/img/dev.svg" alt="dev.to logo" />
-								</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-
-				<nav class="nav-desktop">
-					<div>
-						<img src="/static/img/logo.svg" alt="Desktop logo" />
-					</div>
-					<ul>
-						<li><a class="nav-a" href="/">Home</a></li>
-						<li><a class="nav-a" href="#">Portfolio</a></li>
-						<li><a class="nav-a" href="#">Resume</a></li>
-						<li><a class="nav-a" href="#">Articles</a></li>
-						<li><a class="nav-a" href="#">Contacts</a></li>
-						<li style="margin-top: 10px">
-							<a href="https://twitter.com/gtindo_dev">
-								<img src="/static/img/twitter.svg" alt="twitter logo" />
-							</a>&nbsp;
-							<a href="https://www.linkedin.com/in/guekeng-tindo-yvan-b0a683111/">
-								<img src="/static/img/linkedin.svg" alt="linkedin logo" />
-							</a>&nbsp;
-							<a href="https://github.com/gtindo">
-								<img src="/static/img/github.svg" alt="github logo" />
-							</a>&nbsp;
-							<a href="https://dev.to/gtindo">
-								<img src="/static/img/dev.svg" alt="dev.to logo" />
-							</a>
-						</li>
-					</ul>
-				</nav>
-
+				<%- include('header.ejs') -%>
 			</header>
 
 			<div class="col-10-small-4" style="margin-top:55px;">
@@ -171,29 +106,7 @@
 			</div>
 		</div>
 	</main>
-
-	<footer>
-		&copy; 2020 gtindo.dev.
-		All Right Reserved, Gtindo Dev. 
-	</footer>
 	
-	<script>
-		let navAction = document.getElementById("nav-action");
-		let dropdownMenu = document.getElementById("dropdown-menu");
-
-		navAction.addEventListener('click', function(){
-			let isMenuOpened = this.getAttribute("data-open") === "0" ? false : true;
-
-			if(isMenuOpened){
-				this.setAttribute("src", "/static/img/burger.svg");
-				this.setAttribute("data-open", "0");
-				dropdownMenu.setAttribute("class", "dropdown-menu-deactive");
-			}else{
-				this.setAttribute("src", "/static/img/close.svg");
-				this.setAttribute("data-open", "1");
-				dropdownMenu.setAttribute("class", "dropdown-menu-active")
-			}
-		})
-	</script>
+	<script src="/static/js/main.js"> </script>
 </body>
 </html>

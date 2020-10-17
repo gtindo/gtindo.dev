@@ -12,6 +12,7 @@
 body {
   font-family: var(--font-family);
   background-color: var(--light-color);
+  color: var(--dark-color);
 }
 
 a {
@@ -23,7 +24,7 @@ h1, h2, h3 {
   color: var(--dark-color);
 }
 
-h2 {
+h2, h3 {
   font-size: 24px;
   font-weight: bolder;
 }
@@ -112,13 +113,15 @@ h2 {
 }
 
 footer {
-  background-color: var(--dark-color);
+  width: 100%;
+  overflow: hidden;
   text-align: center;
-  color: var(--light-color);
+  color: var(--dark-color);
   padding: 10px;
 }
 
 .nav-desktop {
+  position: fixed;
   margin-top: 60px;
   text-align: center;
 }
@@ -140,6 +143,42 @@ footer {
   text-decoration: none;
 }
 
+.title {
+  font-size: 48px;
+  color: var(--dark-color);
+  font-weight: bolder;
+}
+
+.content {
+  margin-top: 60px;
+  padding: 0 10px 0 10px; 
+}
+
+.card {
+  box-shadow: 0 0 25px rgba(56, 35, 35, 0.15);
+  border-radius: 5px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px rgba(56, 35, 35, 0.25);
+}
+
+.card span {
+  display: inline-block;
+  color: #777777;
+  padding-bottom: 15px;
+}
+
+.card ul {
+  padding-left: 18px;
+}
+
+.date {
+  text-align: right;
+}
+
 @media screen and (max-width: 720px) {
   .nav-desktop {
     display: none
@@ -147,6 +186,10 @@ footer {
 
   .container {
     width: 100%;
+  }
+
+  .content {
+    padding: 0 5% 0 5%;
   }
 
   .nav-mobile {
@@ -229,5 +272,14 @@ footer {
     width: 90%;
     text-align: left;
     margin: 10px 0 5px 5%;
+  }
+
+  .date {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .card span {
+    padding-bottom: 0px;
   }
 }
