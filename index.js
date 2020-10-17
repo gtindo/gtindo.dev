@@ -12,7 +12,15 @@ app.get("/resume", (req, res) => {
 app.get("/articles", (req, res) => {
   let articles = JSON.parse(fs.readFileSync("articles.json").toString());
   return res.render("articles.ejs", {articles});
-})
+});
+
+app.get("/contacts", (req, res) => {
+  return res.render("contacts.ejs");
+});
+
+app.get("/portfolio", (req, res) => {
+  return res.render("porfolio.ejs");
+});
 
 app.get("/", (req, res) => {
   return res.render("home.ejs");
