@@ -262,8 +262,6 @@ article a, article a:hover {
 
     text-align: center;
     box-shadow: var(--shadow);
-    animation-name: menu-drop;
-    animation-duration: 0.5s;
   }
 
   #dropdown-menu ul {
